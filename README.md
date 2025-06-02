@@ -1,3 +1,4 @@
+                                           12 Factor App
 
 The 12 th factor methodology is a set of 12 principles for building web applications.
 It was published by the co-founder of "Heroku, Mr. Adam Wiggins, in 2011".
@@ -36,25 +37,25 @@ second phase--> add the particular environments to the previous stage.
 
 third stage-->running of the instance of the application.
 
-Processes: we want our app should be stateless processes.
+6.Processes: we want our app should be stateless processes.
 our  app should not remember things after it has completed a task . 
 if the app needs to store the information it should be stored using database or cloud services.
 In this the developer should be known that in app , sticky sessions should not be created , where user's data tied to one specific server.
 
 
-Port Binding: this means a app should be standalone or independent . 
-It has to handle its request on its own .Our app should not used any externbal server to run. It has to listen and handling requests directly on a specific port.
+7.Port Binding: this means a app should be standalone or independent . 
+It has to handle its request on its own .Our app should not be used any external server to run. It has to listen and handling requests directly on a specific port.
 It's self-contained, and you don’t need an external server for it to run.
 
-Concurrency :  It helps to make your app flexible and easily scalable , , allowing the developer to handle more users or traffic by simply adding more proceesses..
+8.Concurrency :  It helps to make your app flexible and easily scalable ,allowing the developer to handle more users or traffic by simply adding more proceesses..
 break the app in smaller processes which work independently to each other 
 (basically to handle traffic over the app.)
 
-Disposability: this principle makes our app reliable and robust by ensuring that its processes can start quickly and shut down gracefully.
+9.Disposability: this principle makes our app reliable and robust by ensuring that its processes can start quickly and shut down gracefully.
 for example :  sometimes app just crashed automaticaaly during some proccessing  but if it start gracefully from the beginning withourt any interruptions.
 
 
-10. Development/ production parity 
+10.Development/ production parity 
 Keeps production and development staging as same  to each other.
 development -> the environment where  we write the codes. 
 staging -> a copy of the production environment , used for testing things.
@@ -72,6 +73,33 @@ run admin / management tasks as on -off processes.
 Manage special tasks directly within the app at time to time .
 
 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++XXXXXXXXXXXXXXXXXXXXXX++++++++++++++++++++++++++++++++++++
+
+
+                                                       Atmoic Designs
+
+Atmoic designs is a design methodology for creating UI in a more structured and modular way. 
+for creating design system.
+breaks ui components into smaller components.
+
+the 5 levels of Atmoic Design :
+1. Atomms : smallest building vlocks of the UI .
+it is a fundamental elements that can't be break into smaller pieces.
+for example : ATOMs-> buttons, Icons, Labels, Colors.
+
+2. Molecules: Combinations of all Atoms . By adding  atoms together , we get a something useful component that have a bit more functinality than atoms one .
+for example-> A search bar , a form field -> input fiel+ button
+3. Organisms ->They are more complex structures made up of multiple molecules.
+They represent larger sections of the UI.
+self contained sectuions-> building blocks of larger , self contained sections of the interface.
+
+4. Templates->combinations of organisms placed together in a layout that defines structure of the page. 
+it doe not contain real content in place.
+
+5. Pages: pages where everthing comes together with real content. 
+final look of the application .
 
 
 
