@@ -59,6 +59,8 @@ Logs are messages that inform you about what's happening inside the app. The app
 ## Admin processes
 Sometimes, applications need to run special tasks before they start working normally. These tasks are usually not needed often, so people often create scripts to run them separately. However, the twelve-factor methodology suggests that these scripts should be part of the application's codebase and stored in version control (like Git). Additionally, these tasks should follow the same principles as the rest of the application.
 
+![12-factor](https://github.com/user-attachments/assets/d36db2c4-a01b-4844-a3a5-a9ea6a88c27c)
+
 # Atomic Designs
 Atomic Design is a methodology for creating user interfaces in a more structured and modular way, aimed at building design systems. It breaks down UI components into smaller, reusable parts.
 
