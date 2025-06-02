@@ -1,105 +1,80 @@
-                                           12 Factor App
+# Twelve-Factor App  
 
-The 12 th factor methodology is a set of 12 principles for building web applications.
-It was published by the co-founder of "Heroku, Mr. Adam Wiggins, in 2011".
+The *Twelve-Factor Methodology* is a set of 12 principles for building web applications, created by **Adam Wiggins** , co-founder of **Heroku**, in 2011. These principles offer a clear framework to ensure that web applications are scalable, maintainable, and easy to deploy. The goal is to help developers follow best practices that support growth and efficiency in their apps.
 
-the 12 th factor methodology is applied over any programming languages and which use any combination of backing services:
-the backing services are :
-1. database 
-2. queu cache
-3. memory cache 
+These principles work with any programming language and can be used with different services like databases, caches, and message systems. The aim is to build apps that are flexible and can easily work with different tools and technologies.
+These principles work with any programming language and can be used with different services like databases, caches, and message systems. The aim is to build apps that are flexible and can easily work with different tools and technologies.
 
-the following 12 factors are  :
+## CodeBase
+Every app should have just one set of code, and this code should be stored in a *version control system*  (like Git or SVN). The same code is used for developing, testing, and running the app. The version control system keeps track of all the changes made to the code.
 
-1. Codebase :
- codes per application tracked in different version control system.
- Each application must have only a single codebase ( single code for testing , deployment and development ).
- codebase- human written source codes 
- version control example -git,svn.
+## Dependenices
 
-2. Dependenices:
- explicitly declare and isolate dependenices. 
-In the 12-Factor methodology, you must clearly declare the tools (dependencies) your app needs to run. 
-In Node.js, this is done using a package.json file, which lists all the required tools and dependenices whichever is required., while the actual tools themselves are stored in a folder called node_modules. This makes sure that your app behaves the same way on any machine or server.
+In the Twelve-Factor methodology, you should clearly declare all the tools (dependencies) your app needs to run. In Node.js, this is done using a package.json file, which lists all the required dependencies. The actual tools are stored in a folder called node_modules. This ensures that your app behaves the same way on any machine or server.
 
-3.Config:
-Store config in the environment.
-the source code and configurations should be different from each other .  
-we must store all the configurations like db credentials, mongodb Uri in the environment variables. Should follow Config Principle.
+## Config
+Store configuration in the environment. The source code and configuration should be kept separate. All configurations, like database credentials or MongoDB URI, should be stored in environment variables. This follows the "Config" principle, ensuring that sensitive information is not hardcoded in the source code.
 
-4.Backing Services: Any services our application consumes over the network.
+## Backing Services
+Any service that your application consumes over the network is considered a backing service. For example, if you’re using *MongoDB* locally, that’s a service your app relies on. If you want to use *MongoDB Compass* to access and manage the data stored in MongoDB, it’s still a backing service, since it’s providing data over the network. These services can include databases, caches, message queues, etc.
 
-5.build , Release and Run :
-we should separate  built and run stages from each other.
-first phase-->  compliation of the code which generates jar and war file
+## Build,Release and Run :
+We should separate the build and run stages of the application.
+- Build Phase:
+This is where the code is compiled, and artifacts like JAR or WAR files are generated.
 
-second phase--> add the particular environments to the previous stage.
+- Release Phase:
+In this phase, environment-specific configurations (such as database URLs or API keys) are added to the application build.
 
-third stage-->running of the instance of the application.
-
-6.Processes: we want our app should be stateless processes.
-our  app should not remember things after it has completed a task . 
-if the app needs to store the information it should be stored using database or cloud services.
-In this the developer should be known that in app , sticky sessions should not be created , where user's data tied to one specific server.
+- Run Phase:
+Finally, the application is started, running as an instance on the server or platform.
 
 
-7.Port Binding: this means a app should be standalone or independent . 
-It has to handle its request on its own .Our app should not be used any external server to run. It has to listen and handling requests directly on a specific port.
-It's self-contained, and you don’t need an external server for it to run.
-
-8.Concurrency :  It helps to make your app flexible and easily scalable ,allowing the developer to handle more users or traffic by simply adding more proceesses..
-break the app in smaller processes which work independently to each other 
-(basically to handle traffic over the app.)
-
-9.Disposability: this principle makes our app reliable and robust by ensuring that its processes can start quickly and shut down gracefully.
-for example :  sometimes app just crashed automaticaaly during some proccessing  but if it start gracefully from the beginning withourt any interruptions.
+## Processes 
+Our app should consist of stateless processes. This means the app should not retain any information after completing a task. If the app needs to store data, it should use external services like databases or cloud storage. Developers should ensure that sticky sessions are avoided, meaning user data should not be tied to a specific server. This approach ensures that the app can scale more easily and remain flexible, as any server can handle any request.
 
 
-10.Development/ production parity 
-Keeps production and development staging as same  to each other.
-development -> the environment where  we write the codes. 
-staging -> a copy of the production environment , used for testing things.
-Production--> live project 
-to fix bugs and issue basically both are same.
+## Port Binding 
+This means the app should be standalone and independent. It should handle its own requests and not rely on an external server. The app must listen for and process requests on a specific port, making it self-contained. No external server is required for the app to run.
+
+## Concurrency 
+Concurrency helps make your app flexible and easily scalable. It allows developers to handle more users or traffic by simply adding more processes. The app is broken down into smaller, independent processes that work separately from each other. This approach helps manage traffic and ensures the app can scale efficiently to meet demand.
+
+## Disposability
+This principle makes the app reliable and robust by ensuring that its processes can start quickly and shut down gracefully. For example, if the app crashes unexpectedly during processing, it should be able to restart smoothly from the beginning without causing any interruptions. This ensures minimal downtime and keeps the app running seamlessly.
+
+## Development/ Production parity 
+This principle emphasizes keeping the production, staging, and development environments as similar as possible.
+
+- Development: The environment where the code is written and tested by developers.
+
+- Staging: A copy of the production environment, used for testing new features and changes before they go live.
+
+- Production: The live environment where the app is used by real users.
 
 
+## Logs 
+Logs are messages that inform you about what's happening inside the app. The app itself shouldn’t be concerned with where or how these logs are stored. It simply generates log data, and the system should take care of storing and managing them.
 
-11. Logs 
-logs are messages that tell you what 's is happening inside our app.
-our app shouldn't worry about where or how logs are stored. 
+## Admin processes
+Sometimes, applications need to run special tasks before they start working normally. These tasks are usually not needed often, so people often create scripts to run them separately. However, the twelve-factor methodology suggests that these scripts should be part of the application's codebase and stored in version control (like Git). Additionally, these tasks should follow the same principles as the rest of the application.
 
-12. Admin processes
-run admin / management tasks as on -off processes.
-Manage special tasks directly within the app at time to time .
+# Atomic Designs
+Atomic Design is a methodology for creating user interfaces in a more structured and modular way, aimed at building design systems. It breaks down UI components into smaller, reusable parts.
 
+The 5 Levels of Atomic Design are:
 
+- Atoms: 
+The smallest UI elements that can't be broken down further, like buttons, icons, or colors.
 
+- Molecules: Groups of atoms combined to form a functional unit, like a search bar or form field.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++XXXXXXXXXXXXXXXXXXXXXX++++++++++++++++++++++++++++++++++++
+- Organisms: More complex UI structures made from multiple molecules, representing larger sections of the interface.
 
+- Templates: Layouts that arrange organisms without real content, defining the page's structure.
 
-                                                       Atmoic Designs
+- Pages: The final version of a page, where all components come together with real content for the end user.
 
-Atmoic designs is a design methodology for creating UI in a more structured and modular way. 
-for creating design system.
-breaks ui components into smaller components.
-
-the 5 levels of Atmoic Design :
-1. Atomms : smallest building vlocks of the UI .
-it is a fundamental elements that can't be break into smaller pieces.
-for example : ATOMs-> buttons, Icons, Labels, Colors.
-
-2. Molecules: Combinations of all Atoms . By adding  atoms together , we get a something useful component that have a bit more functinality than atoms one .
-for example-> A search bar , a form field -> input fiel+ button
-3. Organisms ->They are more complex structures made up of multiple molecules.
-They represent larger sections of the UI.
-self contained sectuions-> building blocks of larger , self contained sections of the interface.
-
-4. Templates->combinations of organisms placed together in a layout that defines structure of the page. 
-it doe not contain real content in place.
-
-5. Pages: pages where everthing comes together with real content. 
-final look of the application .
 
 
 
