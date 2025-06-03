@@ -11,7 +11,7 @@ Every app should have just one set of code, and this code should be stored in a 
 In the *Twelve-Factor methodology*, you should clearly declare all the tools (dependencies) your app needs to run. In Node.js, this is done using a package.json file, which lists all the required dependencies. The actual tools are stored in a folder called node_modules. This ensures that your app behaves the same way on any machine or server.
 
 ## Config
-Configs (API keys, database URLs) should not be hardcoded.Store them in environment variables.Source code and configuration must be seperate from each other.
+Configs (API keys, database URLs) should not be hardcoded.Store them in environment variables.Source code and configuration must be separate from each other.
 
 ## Backing Services
 Any service that your application consumes over the network is considered a backing service. For example, if you’re using *MongoDB* locally, that’s a service your app relies on. If you want to use *MongoDB Compass* to access and manage the data stored in MongoDB, it’s still a backing service, since it’s providing data over the network. These services can include databases, caches, message queues, etc.
