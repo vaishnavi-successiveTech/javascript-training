@@ -76,8 +76,3 @@ The smallest UI elements that can't be broken down further, like buttons, icons,
 - Pages: The final version of a page, where all components come together with real content for the end user.
 
 ![atomic designs](https://github.com/user-attachments/assets/f4ace078-3b2d-45cb-bd13-b909fff3c104)
-
-
-
-
-
