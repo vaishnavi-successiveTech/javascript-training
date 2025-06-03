@@ -1,0 +1,37 @@
+<!-- Write a function to take input(age, name, phone no.) from user and display it -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Details</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Get to know about the user</h2>
+    <div style="text-align: center">
+      <button onclick="userDetails()">Click me</button>
+    </div>
+    <p id="output"></p>
+
+    <script>
+      function userDetails() {
+        let userInput = prompt("Enter your name");
+        if (userInput != null) {
+          console.log(userInput);
+        }
+        let userAge = prompt("Enter your age");
+        if (userAge != null) {
+          console.log(userInput);
+        }
+        let userPhoneno = prompt("Enter your phoneNo");
+        if (userPhoneno != null) {
+          console.log(userPhoneno);
+        }
+        const output = `
+        Name : ${userInput} <br>
+        Age: ${userAge} <br>
+        PhoneNumber : ${userPhoneno}
+        `;
+        document.getElementById("output").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>
