@@ -4,7 +4,7 @@ The *Twelve-Factor Methodology* is a set of 12 principles for building web appli
 
 These principles work with any programming language and can be used with different services like databases, caches, and message systems. The aim is to build apps that are flexible and can easily work with different tools and technologies.
 
-## CodeBase
+## Codebase
 Every app should have just one set of code, and this code should be stored in a *version control system*  (like Git or SVN). The same code is used for developing, testing, and running the app. The version control system keeps track of all the changes made to the code.
 
 ## Dependencies
@@ -39,7 +39,7 @@ Concurrency helps make your app flexible and easily scalable. It allows develope
 ## Disposability
 This principle makes the app reliable and robust by ensuring that its processes can start quickly and shut down gracefully. For example, if the app crashes unexpectedly during processing, it should be able to restart smoothly from the beginning without causing any interruptions. This ensures minimal downtime and keeps the app running seamlessly.
 
-## Development/ Production parity 
+## Development/ Production Parity 
 This principle emphasizes keeping the production, staging, and development environments as similar as possible.
 
 - Development: The environment where the code is written and tested by developers.
@@ -51,12 +51,12 @@ This principle emphasizes keeping the production, staging, and development envir
 ## Logs 
 Logs are messages that inform you about what's happening inside the app. The app itself shouldn’t be concerned with where or how these logs are stored. It simply generates log data, and the system should take care of storing and managing them.
 
-## Admin processes
+## Admin Processes
 Sometimes, applications need to run special tasks before they start working normally. These tasks are usually not needed often, so people often create scripts to run them separately. However, the twelve-factor methodology suggests that these scripts should be part of the application's codebase and stored in version control (like Git). Additionally, these tasks should follow the same principles as the rest of the application.
 
 ![12-factor](https://github.com/user-attachments/assets/d36db2c4-a01b-4844-a3a5-a9ea6a88c27c)
 
-# Atomic Designs
+# Atomic Design
 Atomic Design is a methodology for creating user interfaces in a more structured and modular way, aimed at building design systems. It breaks down UI components into smaller, reusable parts.
 
 The 5 Levels of Atomic Design are:
