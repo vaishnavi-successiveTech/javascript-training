@@ -1,5 +1,4 @@
 //  Write a program to print all even number first and then all odd numbers  using only one iterations
-
 let even = "";
 let odd = "";
 function EvenOdd(num) {
