@@ -6,13 +6,9 @@
 let val = 1;
 let patternResult = "";
 
-for (
-  let i = 1;
-  i < 5;
-  i++ // for rows
-) {
+for (let i = 1;i < 5;i++ ) { // for rows
   for (let j = 0; j < i; j++) {
-    patternResult += val + "\t";
+    patternResult += val + " ";
     val++;
   }
   patternResult += "\n";
@@ -26,16 +22,13 @@ console.log(patternResult);
 
 let result = "";
 
-for (
-  let i = 1;
-  i < 5;
-  i++ // for rows
-) {
+for (let i = 1;i < 5;i++ ) // for rows
+  {
   for (let j = 0; j < i; j++) {
-    result += i;
+    result += i+ " ";
   }
   result += "\n";
-}
+  }
 console.log(result);
 
 // 1 2 3 4 5
@@ -50,8 +43,12 @@ console.log(result);
 
 let num = prompt("Enter a number"); //  take input from user.
 
-function toPrintk(num) {
-  num = parseInt(num); // the input should only number
+function printPattern(num) {
+  if(isNaN(num) || num<=0)
+    {
+      console.log("Please enter a valid positive number");
+      return;
+    }// the input should only number
   for (let i = num;i > 0;i--) // for rows
    {
     let res = "";
@@ -68,5 +65,5 @@ function toPrintk(num) {
     console.log(res);
   }
 }
-toPrintk(num);
+printPattern(num);
 

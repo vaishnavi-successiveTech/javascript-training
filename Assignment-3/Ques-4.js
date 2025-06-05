@@ -1,6 +1,6 @@
 // Write a program to print all even number first and then all odd numbers
-let result = "";
 function EvenOdd(num) {
+  let result = "";
   for (let i = 0; i < num; i++) {
     if (i % 2 == 0) result += i + "\t";
   }
@@ -9,7 +9,8 @@ function EvenOdd(num) {
       result += j + "\t";
     }
   }
+  return result;
 }
 
-EvenOdd(10);
-console.log(result);
+const finalResult = EvenOdd(10);
+console.log(finalResult);
