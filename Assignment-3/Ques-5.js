@@ -5,10 +5,10 @@ function EvenOdd(num) {
   let odd = "";
   for (let i = 0; i < num; i++) {
     if (i % 2 === 0) {
-        even += i + "\t";
+        even += i + " ";
     }
     else {
-      odd += i + "\t";
+      odd += i + " ";
     }
   }
 const result=even+odd;
