@@ -27,8 +27,10 @@ In this phase, environment-specific configurations (such as database URLs or API
 - Run Phase:
 Finally, the application is started, running as an instance on the server or platform.
 
+
 ## Processes 
 Our app should consist of stateless processes. This means the app should not retain any information after completing a task. If the app needs to store data, it should use external services like databases or cloud storage. Developers should ensure that sticky sessions are avoided, meaning user data should not be tied to a specific server. This approach ensures that the app can scale more easily and remain flexible, as any server can handle any request.
+
 
 ## Port Binding 
 This means the app should be standalone and independent. It should handle its own requests and not rely on an external server. The app must listen for and process requests on a specific port, making it self-contained. No external server is required for the app to run.
@@ -48,10 +50,11 @@ This principle emphasizes keeping the production, staging, and development envir
 
 - Production: The live environment where the app is used by real users.
 
+
 ## Logs 
 Logs are messages that inform you about what's happening inside the app. The app itself shouldn’t be concerned with where or how these logs are stored. It simply generates log data, and the system should take care of storing and managing them.
 
-## Admin Processes
+## Admin processes
 Sometimes, applications need to run special tasks before they start working normally. These tasks are usually not needed often, so people often create scripts to run them separately. However, the twelve-factor methodology suggests that these scripts should be part of the application's codebase and stored in version control (like Git). Additionally, these tasks should follow the same principles as the rest of the application.
 
 ![12-factor](https://github.com/user-attachments/assets/d36db2c4-a01b-4844-a3a5-a9ea6a88c27c)
