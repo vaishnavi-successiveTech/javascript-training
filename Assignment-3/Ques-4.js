@@ -2,11 +2,11 @@
 function EvenOdd(num) {
   let result = "";
   for (let i = 0; i < num; i++) {
-    if (i % 2 == 0) result += i + "\t";
+    if (i % 2 == 0) result += i + " ";
   }
   for (let j = 1; j < num; j++) {
     if (j % 2 != 0) {
-      result += j + "\t";
+      result += j + " ";
     }
   }
   return result;
