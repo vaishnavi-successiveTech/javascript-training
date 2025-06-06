@@ -45,5 +45,3 @@ const Arr = [
   [8, 3, 1],
 ];
 console.log(concatenateArray(Arr));
-
-/home/vaishnavi.gupta/Desktop/assignments/javascript-training/JavascriptAssignment-4
