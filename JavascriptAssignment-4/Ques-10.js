@@ -8,7 +8,7 @@ function merge(arr) {
   }
   return mergeArray;
 }
-arr = [
+const arr = [
   [1, 2, 3],
   [4, 2, 1],
   [8, 3, 1],
@@ -16,10 +16,34 @@ arr = [
 console.log(merge(arr));
 
 // using flat function of Array.
-let arr = [
+const array = [
   [1, 2, 3],
   [4, 2, 1],
   [8, 3, 1],
 ];
-let flatArr = arr.flat(2);
+let flatArr = array.flat(2);
 console.log(flatArr);
+
+
+// using recursion 
+const concatenateArray= (Arr)=> {
+  let newArr=[];
+  for(let i of Arr){
+    if(Array.isArray(i)){
+      newArr=newArr.concat(concatenateArray(i)); 
+    }
+    else{
+      newArr.push(i);
+    }
+  }
+return newArr;
+
+}
+const Arr = [
+  [1, 2, 3],
+  [4, 2, 1],
+  [8, 3, 1],
+];
+console.log(concatenateArray(Arr));
+
+/home/vaishnavi.gupta/Desktop/assignments/javascript-training/JavascriptAssignment-4
