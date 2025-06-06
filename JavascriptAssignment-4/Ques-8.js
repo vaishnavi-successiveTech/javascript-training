@@ -10,7 +10,6 @@ function removeDuplicatesArray(arr) {
     }
   }
   return newArr;
-
 }
 let arr=[5,3,3,4,2,1];
 console.log(removeDuplicatesArray(arr));

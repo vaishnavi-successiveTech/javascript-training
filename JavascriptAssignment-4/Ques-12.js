@@ -1,5 +1,6 @@
 //12. Write a program to display intersection of two array
 
+
 function intersection(arr1,arr2){
     let ans=[];
     for(let i=0;i<arr1.length;i++){

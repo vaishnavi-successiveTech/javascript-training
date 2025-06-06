@@ -1,4 +1,32 @@
 //9. Write a program to find the last duplicate index in an array
+// using Map
+function lastDuplicateIndex(Arr){
+    const Arrmap= new Map(); 
+    Arr.forEach((element,index) => {
+        if(Arrmap.has(element))
+        {
+             Arrmap.set(element,index);
+        }
+        else{
+            Arrmap.set(element,-1);
+        }
+    });
+    Arrmap.forEach((value,key) => {
+        if(value=== -1){
+            Arrmap.delete(key);
+        }
+    });
+
+    return Arrmap;
+
+}
+
+let Arr=[3,2,1,4,2,5,6];
+console.log(lastDuplicateIndex(Arr));
+
+
+//  using Set
+
 function lastDuplicate(arr){
     let arrSet=new Set();
     let ans = -1; // if there is no duplicates then it will return -1.
