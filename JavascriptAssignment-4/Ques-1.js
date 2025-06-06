@@ -4,15 +4,15 @@ function removeDuplicates(str) {
   let charSet = new Set(); // declare a set.
   let newStr = []; // create a new array
 
-  let strArray = str.split('');
+  let strArray = str.split("");
   for (let i = 0; i < strArray.length; i++) {
     if (strArray[i] == " ") newStr.push(strArray[i]);
-    
-    if (!(charSet.has(strArray[i]))) {
+
+    if (!charSet.has(strArray[i])) {
       charSet.add(strArray[i]);
       newStr.push(strArray[i]);
     }
   }
-  return newStr.join('');
+  return newStr.join("");
 }
 console.log(removeDuplicates("hello yellow Wolley"));

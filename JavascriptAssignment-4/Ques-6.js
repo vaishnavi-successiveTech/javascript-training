@@ -3,11 +3,10 @@ function SumArray(arr) {
   let sum = 0;
   let i = 0;
   while (i < arr.length) {
-    if(!isNaN(arr[i])){
-    sum += arr[i];
-    i++;
-    }
-    else{
+    if (!isNaN(arr[i])) {
+      sum += arr[i];
+      i++;
+    } else {
       console.log("Error- Array does contain only numbers");
     }
   }

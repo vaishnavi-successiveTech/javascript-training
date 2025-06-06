@@ -1,46 +1,41 @@
 //9. Write a program to find the last duplicate index in an array
 // using Map
-function lastDuplicateIndex(Arr){
-    const Arrmap= new Map(); 
-    Arr.forEach((element,index) => {
-        if(Arrmap.has(element))
-        {
-             Arrmap.set(element,index);
-        }
-        else{
-            Arrmap.set(element,-1);
-        }
-    });
-    Arrmap.forEach((value,key) => {
-        if(value=== -1){
-            Arrmap.delete(key);
-        }
-    });
+function lastDuplicateIndex(Arr) {
+  const Arrmap = new Map();
+  Arr.forEach((element, index) => {
+    if (Arrmap.has(element)) {
+      Arrmap.set(element, index);
+    } else {
+      Arrmap.set(element, -1);
+    }
+  });
+  Arrmap.forEach((value, key) => {
+    if (value === -1) {
+      Arrmap.delete(key);
+    }
+  });
 
-    return Arrmap;
-
+  return Arrmap;
 }
 
-let Arr=[3,2,1,4,2,5,6];
+let Arr = [3, 2, 1, 4, 2, 5, 6];
 console.log(lastDuplicateIndex(Arr));
-
 
 //  using Set
 
-function lastDuplicate(arr){
-    let arrSet=new Set();
-    let ans = -1; // if there is no duplicates then it will return -1.
+function lastDuplicate(arr) {
+  let arrSet = new Set();
+  let ans = -1; // if there is no duplicates then it will return -1.
 
-    for(let i=0;i<arr.length;i++){
-        if(!arrSet.has(arr[i])){
-            arrSet.add(arr[i]);
-        }
-        else{
-            ans=i;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (!arrSet.has(arr[i])) {
+      arrSet.add(arr[i]);
+    } else {
+      ans = i;
     }
-    return ans;
+  }
+  return ans;
 }
-console.log(lastDuplicate([1,2,3,4,5,7])) // for -1
-let arr=[3,2,1,4,2,5,6];
+console.log(lastDuplicate([1, 2, 3, 4, 5, 7])); // for -1
+let arr = [3, 2, 1, 4, 2, 5, 6];
 console.log(lastDuplicate(arr));
