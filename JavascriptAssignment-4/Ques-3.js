@@ -1,5 +1,5 @@
 // 3. Write a program to give count of variables in a string ("abcabcdabbcc" => "a3b4c4d1")
-function CountOccurence(string) {
+function countOccurence(string) {
   let str=string.toLowerCase();
   let mapAlphabets = new Map(); // Map declare
   for (let i = 0; i < str.length; i++) {
@@ -17,4 +17,4 @@ function CountOccurence(string) {
 }
 
 const str = "abcabcdabbcc";
-console.log(CountOccurence(str));
+console.log(countOccurence(str));
