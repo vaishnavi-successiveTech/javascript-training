@@ -1,10 +1,10 @@
 // Write a program to convert given string to upperCase OR lowerCase
 
-function changeToUpper(str) {
+const changeToUpper = (str)=>{
   let result = str.toUpperCase();
   return result;
 }
-function changeToLower(str) {
+const changeToLower= (str)=> {
   let res = str.toLowerCase();
   return res;
 }

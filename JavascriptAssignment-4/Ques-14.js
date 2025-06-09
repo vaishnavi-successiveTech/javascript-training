@@ -1,6 +1,6 @@
 //14. Write a program to reverse an array
 
-function reverseArray(arr) {
+const reverseArray=(arr)=> {
   let revArray = [];
   let len = arr.length;
   for (let i = len - 1; i > 0; i--) {

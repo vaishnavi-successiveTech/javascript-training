@@ -1,6 +1,6 @@
 // Write a program to convert given string in camel case ("hello john doe" => helloJohnDoe)
 
-function camelString(string) {
+const camelString = (string)=> {
 let str=string.toLowerCase().trim();
 const words=str.split(" ");
 let result="";
@@ -22,7 +22,7 @@ console.log(camelString(str));
 
 
 
-// function CamelString(str) {
+// function camelString(str) {
 //   let i = 0;
 //   let result = "";
 //   let str2 = str.trim();

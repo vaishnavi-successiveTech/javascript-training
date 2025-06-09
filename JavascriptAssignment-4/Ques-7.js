@@ -1,7 +1,7 @@
 // 7. Write a program to find index of duplicate elements in an array
 const arr = [8, 9, 8, 2, 3, 1, 2, 1, 9, 5, 8];
 
-function indexOfDuplicates(arr) {
+const indexOfDuplicates= (arr)=> {
   let resArr = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
@@ -16,7 +16,7 @@ indexOfDuplicates(arr);
 
 // using set
 
-function indexOfDuplicatesValue(arr) {
+const indexOfDuplicatesValue=(arr)=> {
   const charSet = new Set(arr);
   for (let Arr of charSet) {
     count = 0;

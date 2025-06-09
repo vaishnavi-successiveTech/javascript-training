@@ -1,6 +1,6 @@
 //  Write a program to remove dupliacte elements from an array
 
-function removeDuplicatesArray(arr) {
+const removeDuplicatesArray= (arr)=>{
   let charSet = new Set(); // declare a set.
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {

@@ -1,5 +1,5 @@
 //12. Write a program to display intersection of two array
-function  intersectionSet(arr1,arr2){
+const  intersectionSet=(arr1,arr2)=>{
   let ans=[];
   let charSet=new Set(arr1);
   for(let i=0;i<arr2.length;i++){

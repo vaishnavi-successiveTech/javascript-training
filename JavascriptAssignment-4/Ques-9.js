@@ -1,6 +1,6 @@
 //9. Write a program to find the last duplicate index in an array
 // using Map
-function lastDuplicateIndex(arr) {
+const lastDuplicateIndex = (arr)=> {
   const Arrmap = new Map();
   arr.forEach((element, index) => {
     if (Arrmap.has(element)) {
@@ -23,7 +23,7 @@ console.log(lastDuplicateIndex(arr));
 
 //  using Set
 
-function lastDuplicate(arr) {
+const lastDuplicate = (arr)=> {
   let arrSet = new Set();
   let ans = -1; // if there is no duplicates then it will return -1.
 
