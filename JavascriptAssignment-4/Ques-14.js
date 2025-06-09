@@ -8,5 +8,5 @@ function reverseArray(arr) {
   }
   return revArray;
 }
-let arr = [2, 4, 5, 6, 7, 8];
+const arr = [2, 4, 5, 6, 7, 8];
 console.log(reverseArray(arr));

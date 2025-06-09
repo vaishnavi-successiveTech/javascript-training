@@ -1,8 +1,8 @@
 //9. Write a program to find the last duplicate index in an array
 // using Map
-function lastDuplicateIndex(Arr) {
+function lastDuplicateIndex(arr) {
   const Arrmap = new Map();
-  Arr.forEach((element, index) => {
+  arr.forEach((element, index) => {
     if (Arrmap.has(element)) {
       Arrmap.set(element, index);
     } else {
@@ -18,8 +18,8 @@ function lastDuplicateIndex(Arr) {
   return Arrmap;
 }
 
-let Arr = [3, 2, 1, 4, 2, 5, 6];
-console.log(lastDuplicateIndex(Arr));
+const arr = [3, 2, 1, 4, 2, 5, 6];
+console.log(lastDuplicateIndex(arr));
 
 //  using Set
 
@@ -37,5 +37,4 @@ function lastDuplicate(arr) {
   return ans;
 }
 console.log(lastDuplicate([1, 2, 3, 4, 5, 7])); // for -1
-let arr = [3, 2, 1, 4, 2, 5, 6];
 console.log(lastDuplicate(arr));

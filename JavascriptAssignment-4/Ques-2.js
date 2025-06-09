@@ -1,5 +1,16 @@
 // 2.Write a program to reverse a string ("Hello John" => "olleH nhoJ")
+// using reverse built-in function
+function revString(str) {
+  return str
+    .split(" ") //  ["Hello", "John"]
+    .map(word => word.split("").reverse().join(""))
+    .join(" "); // join back
+}
 
+let result = revString("Hello John");
+console.log(result);
+
+// 2.Write a program to reverse a string ("Hello John" => "olleH nhoJ")
 function reverseString(str) {
   let ans = "";
   let strArray = str.split(" "); // ["Hello","World"]

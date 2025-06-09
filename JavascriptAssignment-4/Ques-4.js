@@ -9,7 +9,7 @@ function changeToLower(str) {
   return res;
 }
 
-let str = "Hello";
+const str = "Hello";
 console.log(changeToUpper(str));
-let str1 = "joY";
+const str1 = "joY";
 console.log(changeToLower(str1));

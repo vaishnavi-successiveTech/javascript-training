@@ -1,6 +1,7 @@
 // Write a program to remove duplicate charecters from a string ("Hello Yellow" => "Helo Yw")
 
-function removeDuplicates(str) {
+function removeDuplicates(string) {
+  let str=string.toLowerCase();
   let charSet = new Set(); // declare a set.
   let newStr = []; // create a new array
 
@@ -15,4 +16,4 @@ function removeDuplicates(str) {
   }
   return newStr.join("");
 }
-console.log(removeDuplicates("hello yellow Wolley"));
+console.log(removeDuplicates("Hello yellow kolley"));
