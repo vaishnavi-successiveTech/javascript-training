@@ -18,6 +18,7 @@ class Person {
     );
   }
 }
+
 const person = new Person("Raj", 20, "Male", "Playing Cricket");
 person.greeting();
 person.farewell();
