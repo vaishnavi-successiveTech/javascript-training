@@ -9,11 +9,12 @@ const lastDuplicateIndex = (arr)=> {
       arrMap.set(element, -1);
     }
   });
-  arrMap.forEach((value, key) => {
-    if (value === -1) {
+  // for removing the -1 whose element does not have duplicates
+ for(const[key,val] of arrMap){
+    if (val === -1) {
       arrMap.delete(key);
     }
-  });
+  }
 
   return Array.from(arrMap.values());
 }
@@ -24,7 +25,7 @@ console.log(lastDuplicateIndex(arr));
 //  using Set
 
 const lastDuplicate = (arr)=> {
-  let arrSet = new Set();
+  const arrSet = new Set();
   let ans = -1; // if there is no duplicates then it will return -1.
 
   for (let i = 0; i < arr.length; i++) {

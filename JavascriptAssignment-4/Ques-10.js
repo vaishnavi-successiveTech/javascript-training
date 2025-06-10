@@ -3,7 +3,7 @@
 // using recursion 
 const concatenateArray= (arr)=> {
   let newArr=[];
-  for(let i of arr){
+  for(const i of arr){
     if(Array.isArray(i)){
       newArr=newArr.concat(concatenateArray(i)); 
     }

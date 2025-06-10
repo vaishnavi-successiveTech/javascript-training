@@ -12,6 +12,5 @@ const sortArray=(arr)=> {
   }
   return arr;
 }
-
 const arr = [2, 3, 11, 2, 4];
 console.log(sortArray(arr));

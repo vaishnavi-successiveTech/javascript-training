@@ -6,14 +6,14 @@ const sumArray =(arr)=> {
   while (i < arr.length) {
     if (!isNaN(arr[i])) {
       sum += arr[i];
-      i++;
+     
     } else {
       console.log("Error- Array does contain only numbers");
     }
+     i++;
   }
   return sum;
 }
-
 console.log(sumArray(arr));
 
 // using reduce

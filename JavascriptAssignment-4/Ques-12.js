@@ -1,11 +1,11 @@
 //12. Write a program to display intersection of two array
 const  intersectionSet=(arr1,arr2)=>{
-  let ans=[];
-  let charSet=new Set(arr1);
+  const ans=[];
+  const charSet=new Set(arr1);
   for(let i=0;i<arr2.length;i++){
     if(charSet.has(arr2[i])){
       ans.push(arr2[i]);
-      charSet.delete(arr2[i]);
+      charSet.delete(arr2[i]); // delete the value inside the set.
     }
   }
   return ans;

@@ -2,10 +2,10 @@
 const arr = [8, 9, 8, 2, 3, 1, 2, 1, 9, 5, 8];
 
 const indexOfDuplicatesVal =(array)=>{
- let len =array.length;
+ const len =array.length;
 
- let unique= new Map();
- let duplicate=new Map();
+ const unique= new Map();
+ const duplicate=new Map();
 
  array.forEach((element,index) => {
   if(unique.has(element)){
@@ -17,7 +17,7 @@ const indexOfDuplicatesVal =(array)=>{
   
  });
  for(const [key,val] of duplicate){
-  console.log(`${key} duplicate=${val}`);
+  console.log(`${key} duplicate at index ${val}`);
  }
 }
 indexOfDuplicatesVal(arr);
@@ -25,7 +25,7 @@ indexOfDuplicatesVal(arr);
 //using for loop.
 
 const indexOfDuplicates= (arr)=> {
-  let resArr = [];
+  const resArr = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] == arr[j]) {
