@@ -14,6 +14,7 @@ class BankAccount {
       this.mybalance -= amount;
     }
   };
+  
   displayBalance = () => {
     console.log(
       `Your account has money:${this.mybalance} and Account holder name is ${this.owner}`
