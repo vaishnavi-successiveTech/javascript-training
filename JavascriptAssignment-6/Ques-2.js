@@ -26,9 +26,10 @@ class Triangle extends Shape {
     return (1 / 2) * (this.width * this.height);
   }
 }
-
 // const area=new Shape(4,5);
 const rec = new Rectangle(4, 5);
 const triangle = new Triangle(6, 2);
 console.log(rec.getArea());
 console.log(triangle.getArea());
+
+
