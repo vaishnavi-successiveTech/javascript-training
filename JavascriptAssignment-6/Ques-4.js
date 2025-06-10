@@ -11,6 +11,7 @@ class Person {
       `The Full Name of the person is ${this.firstName}${this.lastName}`
     );
   }
+
   averageAge(arr) {
     let sum = arr.reduce((acc, currVal) => acc + currVal.age, 0);
     const average = sum / arr.length;
