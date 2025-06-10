@@ -1,8 +1,8 @@
 //14. Write a program to reverse an array
 
 const reverseArray=(arr)=> {
-  let revArray = [];
-  let len = arr.length;
+  const revArray = [];
+  const len = arr.length;
   for (let i = len - 1; i > 0; i--) {
     revArray.push(arr[i]);
   }

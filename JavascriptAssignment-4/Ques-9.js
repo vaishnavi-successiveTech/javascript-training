@@ -1,21 +1,21 @@
 //9. Write a program to find the last duplicate index in an array
 // using Map
 const lastDuplicateIndex = (arr)=> {
-  const Arrmap = new Map();
+  const arrMap = new Map();
   arr.forEach((element, index) => {
-    if (Arrmap.has(element)) {
-      Arrmap.set(element, index);
+    if (arrMap.has(element)) {
+      arrMap.set(element, index);
     } else {
-      Arrmap.set(element, -1);
+      arrMap.set(element, -1);
     }
   });
-  Arrmap.forEach((value, key) => {
+  arrMap.forEach((value, key) => {
     if (value === -1) {
-      Arrmap.delete(key);
+      arrMap.delete(key);
     }
   });
 
-  return Arrmap;
+  return Array.from(arrMap.values());
 }
 
 const arr = [3, 2, 1, 4, 2, 5, 6];
@@ -37,4 +37,4 @@ const lastDuplicate = (arr)=> {
   return ans;
 }
 console.log(lastDuplicate([1, 2, 3, 4, 5, 7])); // for -1
-console.log(lastDuplicate(arr));
+console.log(`the last duplicate value of index is ${lastDuplicate(arr)}`);

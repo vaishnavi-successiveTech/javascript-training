@@ -1,19 +1,20 @@
 // 2.Write a program to reverse a string ("Hello John" => "olleH nhoJ")
 // using reverse built-in function
-const revString= (str)=> {
+const revString = (str) => {
   return str
+    .trim()
     .split(" ") //  ["Hello", "John"]
-    .map(word => word.split("").reverse().join(""))
+    .map((word) => word.split("").reverse().join(""))
     .join(" "); // join back
-}
+};
 
 let result = revString("Hello John");
 console.log(result);
 
 // 2.Write a program to reverse a string ("Hello John" => "olleH nhoJ")
-const reverseString= (str) =>{
+const reverseString = (str) => {
   let ans = "";
-  let strArray = str.split(" "); // ["Hello","World"]
+  let strArray = str.trim().split(" "); // ["Hello","World"]
   for (let i = 0; i < strArray.length; i++) {
     ans += revString(strArray[i]) + " ";
   }
@@ -30,5 +31,5 @@ const reverseString= (str) =>{
     }
     return newStr.join(""); // here the output join back and return
   }
-}
+};
 console.log(reverseString("Hello John"));

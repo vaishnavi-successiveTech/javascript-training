@@ -1,4 +1,5 @@
 //Write a program to find sum of an array
+const arr = [2, 5, 23, 4, 5, 9];
 const sumArray =(arr)=> {
   let sum = 0;
   let i = 0;
@@ -14,7 +15,7 @@ const sumArray =(arr)=> {
 }
 
 console.log(sumArray(arr));
-const arr = [2, 5, 23, 4, 5, 9];
+
 // using reduce
 
 console.log(arr.reduce((acc,curr)=>{

@@ -1,9 +1,9 @@
 //10. Write a program to concatenate an input of array of arrays
 
 // using recursion 
-const concatenateArray= (Arr)=> {
+const concatenateArray= (arr)=> {
   let newArr=[];
-  for(let i of Arr){
+  for(let i of arr){
     if(Array.isArray(i)){
       newArr=newArr.concat(concatenateArray(i)); 
     }

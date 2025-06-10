@@ -1,8 +1,8 @@
 // bubble sort
-const bubbleSort=(arr)=> {
-  const n = arr.length;
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n - i - 1; j++) {
+const sortArray=(arr)=> {
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         let temp = arr[j];
         arr[j] = arr[j + 1];
@@ -14,4 +14,4 @@ const bubbleSort=(arr)=> {
 }
 
 const arr = [2, 3, 11, 2, 4];
-console.log(bubbleSort(arr));
+console.log(sortArray(arr));
