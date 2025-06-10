@@ -1,13 +1,13 @@
 // Write a program to iterate over object.
-const obj={
-    name:"John",
-    age:18,
-    country:"India",
-    city:"Delhi"
+const obj = {
+  name: "John",
+  age: 18,
+  country: "India",
+  city: "Delhi",
 };
 
-for( let key in obj ){
-    console.log(`the key of object ${key} and the value ${obj[key]}`);
+for (let key in obj) {
+  console.log(`the key of object ${key} and the value ${obj[key]}`);
 }
 
 // using another object we can iterate the first with spread operator.

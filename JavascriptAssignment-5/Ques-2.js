@@ -5,12 +5,9 @@ const userDetails = [
   { name: "Raj", age: 23 },
   { name: "Tom", age: 24 },
 ];
-userDetails.sort((a,b)=>a.age-b.age) // ascending order on basis of age.
+userDetails.sort((a, b) => a.age - b.age); // ascending order on basis of age.
 // compare and swap the value
 
-for(let ele of userDetails)
-{
-    console.log(ele);
+for (let ele of userDetails) {
+  console.log(ele);
 }
-
-
