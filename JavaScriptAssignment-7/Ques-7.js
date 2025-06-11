@@ -15,7 +15,6 @@ async function fn1(){
     })
     return promise;
 }
-
 async function fn2(){
      let promise= new Promise((resolve,reject)=>{
          let flag=true;

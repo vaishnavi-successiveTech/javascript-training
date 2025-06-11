@@ -13,7 +13,6 @@ function showAfter4Sec() {
   });
   return promise;
 }
-
 async function showSync() {
   try {
     console.log("Promise calling");

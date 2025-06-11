@@ -2,7 +2,6 @@
 // https://api.thecatapi.com/v1/images/search?limit=10
 
 const catDetailsUrl = "https://api.thecatapi.com/v1/images/search?limit=10";
-
 const fetchCatDetails = (url,callCatInfo)=>{
   fetch(url)
   .then(response=>{

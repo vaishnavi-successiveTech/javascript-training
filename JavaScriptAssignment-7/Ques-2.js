@@ -26,5 +26,3 @@ const fnCallback3=()=>{
 }
 
 fnCallback(fnCallback1,fnCallback2,fnCallback3);
-
-

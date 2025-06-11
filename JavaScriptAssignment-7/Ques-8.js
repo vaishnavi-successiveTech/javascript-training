@@ -9,7 +9,6 @@ async function functionAPI(){
     catch(error){
         console.log("Error:",error);
     };
-   
 }functionAPI() ;
 
 async function functionAPI2(){
