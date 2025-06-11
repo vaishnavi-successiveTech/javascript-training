@@ -37,7 +37,8 @@ const obj1={
         south:"Kanyakumari",
         east:"Mehagyala",
         west:{capital:"Jaipur"},
-        famousCities:["Delhi","Chennai","Agra"]
+        famousCities:["Delhi","Chennai","Agra"],
+        g:{}
     },
     pin:43,
     streetNo:[2,3,4,1,5],
@@ -48,14 +49,14 @@ const obj1={
 
 const deepCopyObject=(obj)=>{
     var newObj;
-    if(Array.isArray){
+    if(Array.isArray(obj)){
         newObj=[];
     }
     else{
         newObj={};
     }
-    for(const i of obj){
-        if(typeof(obj)==="object"){
+    for(const i in obj){
+        if(typeof(obj[i])==="object" && obj[i]!==null){
             newObj[i]=deepCopyObject(obj[i]); // key's value
             
         }
@@ -68,5 +69,3 @@ const deepCopyObject=(obj)=>{
 
 obj1.cities.famousCities.push("Goa");
 console.log(obj1);
-
-
