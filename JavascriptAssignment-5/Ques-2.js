@@ -10,4 +10,5 @@ userDetails.sort((a, b) => a.age - b.age); // ascending order on basis of age.
 
 for (let ele of userDetails) {
   console.log(ele);
+  
 }

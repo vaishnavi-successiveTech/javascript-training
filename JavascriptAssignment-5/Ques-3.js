@@ -5,6 +5,7 @@ const userDetails = [
   { name: "Tom", age: 24, id: 3 },
 ];
 
+
 for (let object of userDetails) {
   delete object["id"]; // use delete to delete the key.
 }

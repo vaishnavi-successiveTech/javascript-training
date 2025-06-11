@@ -10,6 +10,7 @@ for (let key in obj) {
   console.log(`the key of object ${key} and the value ${obj[key]}`);
 }
 
+
 // using another object we can iterate the first with spread operator.
 // const obj2={...obj};
 // console.log(obj);

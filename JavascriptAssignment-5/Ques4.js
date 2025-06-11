@@ -14,6 +14,7 @@ const obj = {
     return 3 > 5;
   },
 };
+
 // by doing manually.
 const deepCopy = (obj, newObj) => {
   for (let i in obj) {

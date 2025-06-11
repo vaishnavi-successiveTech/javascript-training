@@ -21,5 +21,6 @@ const obj = {
   b: { c: 2, d: [3, 4] },
 };
 
+
 console.log(flattenObject(obj));
 //Output: { 'a': 1, 'b.c': 2, 'b.d.0': 3, 'b.d.1': 4 }
