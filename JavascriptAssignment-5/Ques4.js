@@ -38,7 +38,6 @@ const obj1={
         east:"Mehagyala",
         west:{capital:"Jaipur"},
         famousCities:["Delhi","Chennai","Agra"],
-        g:{}
     },
     pin:43,
     streetNo:[2,3,4,1,5],
