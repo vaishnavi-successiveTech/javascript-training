@@ -4,10 +4,10 @@ class BankAccount {
     this.mybalance = mybalance;
     this.owner = owner;
   }
-  deposit = (amount1) => {
+  deposit(amount1) {
     this.mybalance += amount1;
   };
-  withdraw = (amount) => {
+  withdraw(amount) {
     if (amount > this.mybalance) {
       console.log("low balance");
     } else {
@@ -15,7 +15,7 @@ class BankAccount {
     }
   };
   
-  displayBalance = () => {
+ displayBalance(){
     console.log(
       `Your account has money:${this.mybalance} and Account holder name is ${this.owner}`
     );

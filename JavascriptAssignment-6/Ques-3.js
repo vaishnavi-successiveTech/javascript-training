@@ -24,8 +24,8 @@ person.greeting();
 person.farewell();
 
 class Student extends Person {
-  constructor(name, age, studies) {
-    super(name, age);
+  constructor(name, age, gender, interests,studies) {
+    super(name, age, gender, interests);
     this.studies = studies;
   }
   greeting() {
@@ -35,17 +35,17 @@ class Student extends Person {
   }
 }
 
-const student = new Student("Raj", 20, "BCA");
+const student = new Student("Raj", 20,"Male","Watching Tv","BCA");
 student.greeting();
 
 class Teacher extends Person {
-  constructor(teach) {
-    super();
+  constructor(name, age, gender, interests,teach) {
+    super(name, age, gender, interests);
     this.teach = teach;
   }
   farewell() {
     console.log(`the teacher use to teach ${this.teach}`);
   }
 }
-const teaching = new Teacher("Science");
+const teaching = new Teacher("Raj", 20,"Male","reading","Science");
 teaching.farewell();

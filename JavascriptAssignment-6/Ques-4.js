@@ -12,7 +12,7 @@ class Person {
     );
   }
 
-  averageAge(arr) {
+  static averageAge(arr) {
     let sum = arr.reduce((acc, currVal) => acc + currVal.age, 0);
     const average = sum / arr.length;
     return average;
@@ -24,4 +24,4 @@ const person3 = new Person("Jitendar", "Tripathi", 25);
 
 person1.fullName();
 const people = [person1, person2, person3];
-console.log(`Average of the person is ${person1.averageAge(people)}`);
+console.log(`Average of the person is ${Person.averageAge(people)}`);

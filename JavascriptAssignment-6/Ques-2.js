@@ -9,18 +9,15 @@ class Shape {
 }
 
 class Rectangle extends Shape {
-  super(width, height) {
-    this.width = width;
-    this.height = height;
-  }
+  constructor(width, height){
+  super(width, height) }
   getArea() {
     return this.width * this.height;
   }
 }
 class Triangle extends Shape {
-  super(width, height) {
-    this.width = width;
-    this.height = height;
+  constructor(width, height){
+  super(width, height) 
   }
   getArea() {
     return (1 / 2) * (this.width * this.height);
