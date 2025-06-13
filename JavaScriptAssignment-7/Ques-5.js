@@ -5,26 +5,24 @@ class PromiseRateLimiter {
     this.activeRequest = 0;
     this.queue = [];
   }
-  addTask(task, priority) {
+  addTask(task, priority=0) {
     return new Promise((resolve, reject) => {
-      this.queue.push({
-        task:() => task().then(resolve).catch(reject),
-        priority
-      });
-      this.queue.sort((a, b) => a.priority - b.priority);
+      this.queue.push({ task:() => task().then(resolve).catch(reject), priority });
+      this.queue.sort((a, b) => a.priority - b.priority); // here the priority is sorted.
       this.processQueue(); // Trying to process the task
     });
   }
-
   processQueue() {
     // process the task here.
-    if (this.activeRequest >=this.limit || this.queue === 0) {
+    if (this.activeRequest >=this.limit || this.queue.length === 0) {
       return;
     }
+
     const nextTask = this.queue.shift();
     this.activeRequest++; // active requests updated.
+
     nextTask.task().finally(() => {
-      this.activeRequest--;
+      this.activeRequest--; // next task start executing so the previous task get cancelled.
       this.processQueue();
     });
   }
@@ -32,7 +30,7 @@ class PromiseRateLimiter {
 
 const createTask = (id, time) => {
   return () => {
-    new Promise((resolve) => {
+    return new Promise((resolve) => {
       console.log(`Task ${id} started`);
       setTimeout(() => {
         console.log(`Task ${id} finished after ${time}`);
@@ -46,5 +44,5 @@ const rateLimiter=new PromiseRateLimiter(3);
 
 rateLimiter.addTask(createTask(1,1000),2);
 rateLimiter.addTask(createTask(3,1000),1);
-rateLimiter.addTask(createTask(5,1000),7);
+rateLimiter.addTask(createTask(5,1000),5);
 rateLimiter.addTask(createTask(2,1000),3);
