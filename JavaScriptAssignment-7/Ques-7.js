@@ -1,6 +1,6 @@
 // 7. Create a function that performs multiple asynchronous operations in parallel using async/await and waits for all of them to complete before returning the results.
 
-async function fn1(){
+const fnCallback1 =async ()=>{
     let promise= new Promise((resolve,reject)=>{
         let flag=true;
         if(flag){
@@ -15,7 +15,7 @@ async function fn1(){
     })
     return promise;
 }
-async function fn2(){
+ const fnCallback2 =async ()=>{
      let promise= new Promise((resolve,reject)=>{
          let flag=true;
         if(flag){
@@ -32,9 +32,9 @@ async function fn2(){
     return promise;
 }
 
-async function showParallelFunction(){
+const showParallelFunction=async()=>{
     try{
-        const res=await Promise.all([fn1(),fn2()]);
+        const res=await Promise.all([fnCallback1(),fnCallback2()]);
         console.log("Result:",res);
         console.log();
     }

@@ -6,7 +6,7 @@
 // }
 
 
-function callAPI(){
+const callAPI=()=>{
     let promise = new Promise((resolve, reject) => {
         let success=true;
         setTimeout(()=>{

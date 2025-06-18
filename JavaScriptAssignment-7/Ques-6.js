@@ -1,6 +1,6 @@
 //6. Implement a function that returns a resolved Promise after a specified delay using async/await
 
-function showAfter4Sec() {
+const showAfterFourSec=()=> {
   let promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (1) {
@@ -13,10 +13,10 @@ function showAfter4Sec() {
   });
   return promise;
 }
-async function showSync() {
+const showSync=async ()=> {
   try {
     console.log("Promise calling");
-    const result = await showAfter4Sec();
+    const result = await showAfterFourSec();
     console.log("hi! there");
     console.log(result);
     console.log("Resolved occurr");

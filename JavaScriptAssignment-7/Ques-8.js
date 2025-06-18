@@ -1,5 +1,5 @@
 //Create a function that fetches data from multiple APIs in parallel and then performs some operation on the combined data, using async/await.
-async function functionAPI(){
+const functionAPI=async ()=>{
     try{
         let response=await fetch(`https://jsonplaceholder.typicode.com/todos/3`);
         let data=await response.json();
@@ -9,9 +9,9 @@ async function functionAPI(){
     catch(error){
         console.log("Error:",error);
     };
-}functionAPI() ;
+}
 
-async function functionAPI2(){
+const functionAPI2=async()=>{
     try{
         let response=await fetch(`https://jsonplaceholder.typicode.com/todos/4`);
         let data=await response.json();
@@ -23,7 +23,7 @@ async function functionAPI2(){
     };
    
 }
-async function operationFetchData(){
+ const operationFetchData =async()=>{
     try{
     const [first,second]=await Promise.all([functionAPI() ,functionAPI2()]);
     const combined={
