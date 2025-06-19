@@ -16,7 +16,6 @@ const fetchCatDetails = (url,callCatInfo)=>{
     });
 }
 
-
 const  handleCatInfo=(error, data)=> {
   if (error) {
     console.error("Error fetching cat data:", error);
@@ -24,7 +23,5 @@ const  handleCatInfo=(error, data)=> {
     console.log("Cat data available:", data);
   }
 }
-
 fetchCatDetails(catDetailsUrl, handleCatInfo);
-
 console.log("Cat details...");

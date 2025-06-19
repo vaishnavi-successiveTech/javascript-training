@@ -2,8 +2,9 @@
 
 const showAfterFourSec=()=> {
   let promise = new Promise((resolve, reject) => {
+      let success = Math.random() > 0.5;
     setTimeout(() => {
-      if (1) {
+      if (success) {
         resolve("resolved");
       } else {
         console.log("rejected", reject);

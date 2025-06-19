@@ -17,8 +17,8 @@ const fnCallback1 =async ()=>{
 }
  const fnCallback2 =async ()=>{
      let promise= new Promise((resolve,reject)=>{
-         let flag=true;
-        if(flag){
+        let success = Math.random() > 0.5;
+        if(success){
         
         setTimeout(()=>{
             console.log("Async function 2");

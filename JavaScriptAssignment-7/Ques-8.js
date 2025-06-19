@@ -10,7 +10,6 @@ const functionAPI=async ()=>{
         console.log("Error:",error);
     };
 }
-
 const functionAPI2=async()=>{
     try{
         let response=await fetch(`https://jsonplaceholder.typicode.com/todos/4`);
@@ -35,7 +34,5 @@ const functionAPI2=async()=>{
         console.error("Error",error);
     }
 }
-
-
 operationFetchData();
 

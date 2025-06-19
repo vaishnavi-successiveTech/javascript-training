@@ -18,11 +18,9 @@ const fnCallback2=(callback1)=>{
         callback1();
     },2000);
 }
-
 const fnCallback3=()=>{
     setTimeout(()=>{
         console.log("this function is 4 th");
     },4000)
 }
-
 fnCallback(fnCallback1,fnCallback2,fnCallback3);
